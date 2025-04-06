@@ -1,0 +1,183 @@
+/* 
+ * Authentication Styling CSS
+ * This stylesheet provides a modern, space-themed design for authentication pages
+ * Key design principles:
+ * - Dark, gradient background
+ * - Frosted glass card effect
+ * - Responsive design
+ * - Enhanced readability
+ */
+
+/* 
+ * Full-page container with a deep space-inspired gradient background
+ * Creates a full-screen authentication experience with centered content
+ */
+ .auth-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #121224, #1e2a4a);
+}
+
+/* 
+ * Authentication card with a modern, frosted glass-like design
+ * Features:
+ * - Translucent background
+ * - Blur effect
+ * - Subtle shadow
+ * - Rounded corners
+ */
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(22, 33, 62, 0.90); /* Slightly transparent dark background */
+  backdrop-filter: blur(15px); /* Creates a frosted glass effect */
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.3), /* Deep shadow for depth */
+    0 0 40px rgba(71, 119, 254, 0.15); /* Soft glow effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 10;
+  margin: 2rem;
+}
+
+/* 
+ * Header styling for authentication pages
+ * Provides a clean, modern look with centered text
+ */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.auth-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.auth-header p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+}
+
+/* 
+ * Form group styling with enhanced label visibility
+ * Provides clear separation between labels and input fields
+ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.form-group input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* 
+ * Enhanced input focus state
+ * Provides visual feedback when input is selected
+ */
+.form-group input:focus {
+  outline: none;
+  border-color: rgba(71, 119, 254, 0.7);
+  box-shadow: 0 0 0 4px rgba(71, 119, 254, 0.3);
+}
+
+/* 
+ * Form actions section with full-width button
+ * Provides a prominent call-to-action
+ */
+.form-actions button {
+  width: 100%;
+  padding: 0.9rem 1.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(90deg, #4777fe, #5d60f0);
+  color: white;
+  border: none;
+}
+
+/* 
+ * Footer styling for authentication pages
+ * Provides links and additional navigation options
+ */
+.auth-footer {
+  margin-top: 1.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* 
+ * Error and success message styling
+ * Provides clear visual feedback for user actions
+ */
+.error-message-container {
+  margin-top: 1rem;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message {
+  background: rgba(239, 68, 68, 0.9);
+  border: 1px solid rgba(239, 68, 68, 1);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* 
+ * Responsive design adjustments for smaller screens
+ */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 1.75rem;
+    margin: 1.5rem;
+  }
+  
+  .auth-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* 
+ * Fade-in animation for dynamic elements
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
